@@ -1,0 +1,103 @@
+.card {
+  background-color: lightgrey;
+  width: 230px;
+  height: 230px;
+  border: solid 2px darkgrey;
+  border-radius: 50px;
+}
+
+/* margen predeterminado de los navegadores de 8px */
+
+body {
+  margin: 0;
+}
+
+.card h2,
+.card p,
+.card button {
+  text-align: center;
+}
+
+/* .card button {
+  margin-left: 50px;
+} */
+
+/* lo dejamos para luego */
+
+#cards-container {
+  background-color: lightblue;
+
+  display: flex;
+  justify-content: space-evenly; /* horizontalmente */
+  align-items: center; /* verticalmente */
+
+  /* height: 700px; */
+  /* viewport height y viewport width */
+
+  /* height: 100vh; */
+  min-height: 100vh;
+
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column; /* invierte la orientacion de las propiedades abajo */
+
+  justify-content: center; /* verticalmente */
+  align-items: center; /* horizontalmente */
+
+  /* flex: 1 1 230px; */
+
+  /* flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 230px; */
+
+  /* margin: 20px; */
+}
+
+/* display: block; ocupa todo el maximo del contenedor parent */
+/* display: inline; ocupa el tamaño del contenido interno */
+
+/* PARA TABLETS */
+
+@media (max-width: 1030px) {
+  #cards-container {
+    background-color: lightgreen;
+  }
+
+  .card {
+    width: 360px;
+    height: 360px;
+    font-size: 26px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 470px) {
+  #cards-container {
+    background-color: lightgoldenrodyellow;
+  }
+
+  .card {
+    width: 150px;
+    height: 280px;
+    font-size: 16px;
+  }
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  box-shadow: 10px 10px 8px darkgrey;
+
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: lightseagreen;
+}
+
+button:active {
+  background-color: blueviolet;
+}
